@@ -68,7 +68,6 @@ buttonPrevious.addEventListener("click", function (e) {
 
 
 function displayDetails(res) {
-    console.log(res.data.results);
     let characters = res.data.results;
     for (let i = 0; characters.length > i; i++) {
         let card = document.createElement('div');
@@ -133,5 +132,3 @@ fetch(url)
     )
     .catch(error => console.log(error));
 
-
-console.log(document.getElementsByClassName("card"));
