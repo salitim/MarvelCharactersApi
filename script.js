@@ -1,6 +1,3 @@
-
-
-
 function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
@@ -14,7 +11,6 @@ function getCookie(name) {
 
 
 const publickey = '9b78e584812ee3975ccdd079af4656ec';
-const privatekey = 'ee9d7596695591974144d8f08d638298d8402a0a';
 const ts = 1;
 const hash = getCookie('marvelCookie');
 const baseUrl = 'https://gateway.marvel.com/v1/public/characters';
@@ -34,14 +30,15 @@ buttonNext.addEventListener("click", function (e) {
     e.preventDefault();
     offset = offset + 10;
     for (let i = 0; i < document.getElementsByClassName("card").length; i++) {
-        console.log(document.getElementsByClassName("card")[i]);
         document.getElementsByClassName("card")[i].style.display = 'none';
     }
 
-    i = + 10;
+    i = +10;
     const url = baseUrl + '?limit=' + limit + '&offset=' + offset + '&ts=' + ts + '&apikey=' + publickey + '&hash=' + hash;
     fetch(url)
-        .then(data => { return data.json() })
+        .then(data => {
+            return data.json()
+        })
         .then(res => {
             displayDetails(res);
         })
@@ -54,12 +51,13 @@ buttonPrevious.addEventListener("click", function (e) {
     e.preventDefault();
     offset = offset - 10;
     for (let i = 0; i < document.getElementsByClassName("card").length; i++) {
-        console.log(document.getElementsByClassName("card")[i]);
         document.getElementsByClassName("card")[i].style.display = 'none';
     }
     const url = baseUrl + '?limit=' + limit + '&offset=' + offset + '&ts=' + ts + '&apikey=' + publickey + '&hash=' + hash;
     fetch(url)
-        .then(data => { return data.json() })
+        .then(data => {
+            return data.json()
+        })
         .then(res => {
             displayDetails(res);
         })
@@ -89,12 +87,13 @@ function displayDetails(res) {
         name.addEventListener("click", function (e) {
             e.preventDefault();
             fetch(url)
-                .then(data => { return data.json() })
+                .then(data => {
+                    return data.json()
+                })
                 .then(res1 => {
 
                     let character = res1.data.results;
                     e = i;
-                    console.log(character[e].comics.items.length)
                     let details = document.createElement('ul');
                     let namelist = document.createElement('li');
                     let description = document.createElement('li');
@@ -125,10 +124,12 @@ function displayDetails(res) {
 
 const url = baseUrl + '?limit=' + limit + '&offset=' + offset + '&ts=' + ts + '&apikey=' + publickey + '&hash=' + hash;
 fetch(url)
-    .then(data => { return data.json() })
+    .then(data => {
+        return data.json()
+    })
     .then(res => {
-        displayDetails(res);
-    }
+            displayDetails(res);
+        }
     )
     .catch(error => console.log(error));
 
