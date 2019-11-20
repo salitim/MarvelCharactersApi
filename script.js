@@ -18,13 +18,15 @@ const limit = 10;
 let offset = 100;
 let j;
 const app = document.getElementById("app");
-
-let buttonNext = document.createElement("button");
-buttonNext.appendChild(document.createTextNode("Next"));
-app.appendChild(buttonNext);
 let buttonPrevious = document.createElement("button");
+buttonPrevious.className = "btn btn-primary";
 buttonPrevious.appendChild(document.createTextNode("Previous"));
 app.appendChild(buttonPrevious);
+let buttonNext = document.createElement("button");
+buttonNext.className = "btn btn-primary"
+buttonNext.appendChild(document.createTextNode("Next"));
+app.appendChild(buttonNext);
+
 
 buttonNext.addEventListener("click", function (e) {
     e.preventDefault();
@@ -40,7 +42,7 @@ buttonNext.addEventListener("click", function (e) {
             return data.json()
         })
         .then(res => {
-            displayDetails(res);
+            displayDetails(res, url);
         })
         .catch(error => console.log(error));
 
@@ -59,13 +61,13 @@ buttonPrevious.addEventListener("click", function (e) {
             return data.json()
         })
         .then(res => {
-            displayDetails(res);
+            displayDetails(res, url);
         })
         .catch(error => console.log(error));
 })
 
 
-function displayDetails(res) {
+function displayDetails(res, url) {
     let characters = res.data.results;
     for (let i = 0; characters.length > i; i++) {
         let card = document.createElement('div');

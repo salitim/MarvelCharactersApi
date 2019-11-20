@@ -42,6 +42,7 @@ require_once('root.php')
             color: #FFF;
             border-bottom: solid 4px #627295;
             border-radius: 3px;
+            cursor: pointer;
         }
 
         .heroeName:active { /*OnClick*/
