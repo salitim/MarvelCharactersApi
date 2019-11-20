@@ -16,7 +16,6 @@ const hash = getCookie('marvelCookie');
 const baseUrl = 'https://gateway.marvel.com/v1/public/characters';
 const limit = 10;
 let offset = 100;
-let j;
 const app = document.getElementById("app");
 let buttonPrevious = document.createElement("button");
 buttonPrevious.className = "btn btn-primary";
@@ -25,6 +24,7 @@ app.appendChild(buttonPrevious);
 let buttonNext = document.createElement("button");
 buttonNext.className = "btn btn-primary"
 buttonNext.appendChild(document.createTextNode("Next"));
+app.appendChild(buttonPrevious);
 app.appendChild(buttonNext);
 
 
@@ -135,3 +135,5 @@ fetch(url)
     )
     .catch(error => console.log(error));
 
+module.exports(getCookie);
+module.exports(url);
