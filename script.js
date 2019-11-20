@@ -20,7 +20,7 @@ const hash = getCookie('marvelCookie');
 const baseUrl = 'https://gateway.marvel.com/v1/public/characters';
 const limit = 10;
 let offset = 100;
-
+let j;
 const app = document.getElementById("app");
 
 let buttonNext = document.createElement("button");
@@ -31,11 +31,14 @@ buttonPrevious.appendChild(document.createTextNode("Previous"));
 app.appendChild(buttonPrevious);
 
 buttonNext.addEventListener("click", function (e) {
+    e.preventDefault();
     offset = offset + 10;
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < document.getElementsByClassName("card").length; i++) {
         console.log(document.getElementsByClassName("card")[i]);
         document.getElementsByClassName("card")[i].style.display = 'none';
     }
+
+    i = + 10;
     const url = baseUrl + '?limit=' + limit + '&offset=' + offset + '&ts=' + ts + '&apikey=' + publickey + '&hash=' + hash;
     fetch(url)
         .then(data => { return data.json() })
@@ -48,8 +51,9 @@ buttonNext.addEventListener("click", function (e) {
 })
 
 buttonPrevious.addEventListener("click", function (e) {
+    e.preventDefault();
     offset = offset - 10;
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < document.getElementsByClassName("card").length; i++) {
         console.log(document.getElementsByClassName("card")[i]);
         document.getElementsByClassName("card")[i].style.display = 'none';
     }
