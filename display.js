@@ -1,3 +1,4 @@
+
 /* Fonction dédiée à l'affichage */
 
 function displayDetails(res, url) {
@@ -34,20 +35,20 @@ function displayDetails(res, url) {
                     let description = document.createElement('li');
                     let numberSeenComics = document.createElement('li');
                     let firstAppearance = document.createElement('li');
-                    let secondtAppearance = document.createElement('li');
+                    let secondAppearance = document.createElement('li');
                     let thirdAppearance = document.createElement('li');
                     namelist.textContent = character[e].name;
                     description.textContent = character[e].description;
                     numberSeenComics.textContent = "Nombre de comics où le personnage apparait  : " + character[e].comics.items.length;
-                    firstAppearance.textContent = character[e].comics.items[0].name;
-                    secondtAppearance.textContent = character[e].comics.items[1].name;
-                    thirdAppearance.textContent = character[e].comics.items[2].name;
+                    character[e].comics.items[0] === undefined ? firstAppearance.textContent = "rien trouvé" : firstAppearance.textContent = character[e].comics.items[0].name;
+                    character[e].comics.items[1] === undefined ? secondAppearance.textContent = "rien trouvé" : secondAppearance.textContent = character[e].comics.items[1].name;
+                    character[e].comics.items[2] === undefined ? thirdAppearance.textContent = "rien trouvé" : thirdAppearance.textContent = character[e].comics.items[2].name;
                     card.appendChild(details)
                     details.appendChild(namelist);
                     details.appendChild(description);
                     details.appendChild(numberSeenComics);
                     details.appendChild(firstAppearance);
-                    details.appendChild(secondtAppearance);
+                    details.appendChild(secondAppearance);
                     details.appendChild(thirdAppearance);
 
                 })
