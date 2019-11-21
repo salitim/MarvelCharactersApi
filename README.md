@@ -2,8 +2,8 @@
 MarvelCharactersApi est en mode "Single page application".
 
 Prérequis:
-Tester sur un environnement Windows.
-Activer les cookiers du navigateur(Crome ou Firefox).
+Windows.
+Activer les cookies du navigateur(Chrome ou Firefox).
 Serveur: Wamp(ou autres ex: lamp)
 php 5 ou 7.
 
