@@ -65,7 +65,7 @@ fetch(url)
         return data.json()
     })
     .then(res => {
-            displayDetails(res);
+            displayDetails(res, url);
         }
     )
     .catch(error => console.log(error));
