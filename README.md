@@ -16,4 +16,8 @@ Vous pouvez désormais utilisez l'application!
 Cliquer sur le nom du personnage afin d'avoir les détails.
 La pagination est possible avec les boutons "next" et "previous".
 
+Performance:
+Le fait d'utiliser Vanilla JS permet d'avoir des peformances plus hautes qu'un Framework.
+J'ai utilisé php mais node.js aurez peu être accéléré le transfert de la clé hashé(sans passer par un cookie).
+Amélioration possible : mise en place de la POO.
 
