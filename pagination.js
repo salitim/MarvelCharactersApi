@@ -2,7 +2,7 @@
 
 buttonNext.addEventListener("click", function (e) {
     e.preventDefault();
-    offset = offset + 10;
+    offset = offset + 20;
     for (let i = 0; i < document.getElementsByClassName("card").length; i++) {
         document.getElementsByClassName("card")[i].style.display = 'none';
     }
@@ -24,7 +24,7 @@ buttonNext.addEventListener("click", function (e) {
 
 buttonPrevious.addEventListener("click", function (e) {
     e.preventDefault();
-    offset = offset - 10;
+    offset = offset - 20;
     for (let i = 0; i < document.getElementsByClassName("card").length; i++) {
         document.getElementsByClassName("card")[i].style.display = 'none';
     }
