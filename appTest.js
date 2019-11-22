@@ -9,7 +9,10 @@ describe('Testing the functionality and display', ()=>{
             expect(offset).toBe(100);
         
     });
-
+    
+    it("It should return 20 card", function () {
+        expect(limit).toBe(20);
+    });
 })
 
 describe('Testing the API', ()=>{
