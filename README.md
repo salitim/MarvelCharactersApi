@@ -25,4 +25,4 @@ Amélioration possible : mise en place de la POO.
 Test:
 J'ai effectué des tests en direct de fonctionnement et de comportement de l'application. Comme si j'étais un utilisateur lambda.
 L'utilisation de console.log m'a permis de lire et de récupérer certaines erreurs.
-J'ai codé quelques tests dans le cas de l'utilisation de l'outil jest.js. Ces tests permettent de vérifier la bonne récupération du cookie, la réponse de récupération des données de l'API et l'affichage dans le DOM.
+J'ai codé quelques tests dans le cas de l'utilisation de l'outil jasmine.
