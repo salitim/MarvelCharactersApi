@@ -26,3 +26,4 @@ Test:
 J'ai effectué des tests en direct de fonctionnement et de comportement de l'application. Comme si j'étais un utilisateur lambda.
 L'utilisation de console.log m'a permis de lire et de récupérer certaines erreurs.
 J'ai codé quelques tests dans le cas de l'utilisation de l'outil jasmine.
+Pour executer les tests lancer le fichier TestRunner.html .
