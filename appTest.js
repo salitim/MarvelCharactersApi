@@ -1,5 +1,5 @@
 
-describe('Testing the functionality and display', () => {
+describe('Testing variable, api, and click event', () => {
 
     beforeEach(function () {
         jasmine.Ajax.install();
@@ -44,8 +44,9 @@ describe('Testing the functionality and display', () => {
 
     });
 
-    it("click", function () {
-        let nextPage = next();
+    it("return true on click", function () {
+        expect(nextPage.click()).toBe(true);
+        expect(previousPage.click()).toBe(true);
     });
 })
 

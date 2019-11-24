@@ -15,5 +15,7 @@ app.appendChild(buttonPrevious);
 app.appendChild(buttonNext);
 buttonPrevious.appendChild(document.createTextNode("Previous"));
 buttonNext.appendChild(document.createTextNode("Next"));
+buttonNext.id = "next";
+buttonPrevious.id = "previous";
 buttonNext.className = "btn btn-primary";
 buttonPrevious.className = "btn btn-primary";
