@@ -9,9 +9,9 @@ php 5 ou 7.
 
 Utilisation:
 Placer les fichiers dans un dossier nommé "ApiMarvel".
-Le dossier est à placer dans le dossier "www" du dossier "Wamp" sur votre disque dur(Par défaut C:\wamp6\www). 
+Le dossier est à placer dans le dossier "www" du dossier "Wamp" sur votre disque dur(Par défaut C:\wamp64\www). 
 Lancer le serveur Wamp.
-Ouvrir CHrome ou firefox. Rentrer l'adresse : http://localhost:80/ApiMarvel/
+Ouvrir CHrome ou firefox. Rentrer l'adresse : http://localhost/ApiMarvel/
 
 Vous pouvez désormais utiliser l'application!
 Cliquer sur le nom du personnage afin d'avoir les détails.
