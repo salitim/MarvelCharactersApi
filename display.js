@@ -1,7 +1,7 @@
 
 /* Fonction dédiée à l'affichage */
-
-function displayDetails(res, url) {
+function displayDetails(){};
+displayDetails.prototype.init = function(res, url) {
     let characters = res.data.results;
     for (let i = 0; characters.length > i; i++) {
         let card = document.createElement('div');
@@ -56,17 +56,34 @@ function displayDetails(res, url) {
 
         })
     }
+    return true;
 }
 
+const display = new displayDetails();
 /*Lancement de l'affichage des personnages */
 
 const url = baseUrl + '?limit=' + limit + '&offset=' + offset + '&ts=' + ts + '&apikey=' + publickey + '&hash=' + hash;
+
 fetch(url)
     .then(data => {
         return data.json()
     })
-    .then(res => {
-            displayDetails(res, url);
+    .then(res => {           
+            display.init(res, url);
         }
     )
     .catch(error => console.log(error));
+
+ /*   
+    function fetching (url) {
+        return fetch(url)
+        .then(data => {
+            return data.json()
+        })
+        .then(res => {           
+               return res;
+            }
+        )
+    };
+    console.log(fetching(url).then(res => console.log(res.code)));
+    */

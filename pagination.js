@@ -1,5 +1,6 @@
 /*Pagination*/
-
+function next(){};
+next.prototype.click = function() {
 buttonNext.addEventListener("click", function (e) {
     e.preventDefault();
     offset = offset + 20;
@@ -14,14 +15,16 @@ buttonNext.addEventListener("click", function (e) {
             return data.json()
         })
         .then(res => {
-            displayDetails(res, url);
+            display.init(res, url);
         })
         .catch(error => console.log(error));
 
 
 })
 
-
+}
+function previous(){};
+previous.prototype.click = function() {
 buttonPrevious.addEventListener("click", function (e) {
     e.preventDefault();
     offset = offset - 20;
@@ -34,7 +37,15 @@ buttonPrevious.addEventListener("click", function (e) {
             return data.json()
         })
         .then(res => {
-            displayDetails(res, url);
+            display.init(res, url);
         })
         .catch(error => console.log(error));
 })
+    
+}
+
+let nextPage = new next();
+let previousPage = new previous();
+
+nextPage.click();
+previousPage.click();
